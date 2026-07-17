@@ -5,11 +5,7 @@ export default function Navbar() {
     <header className="sticky top-0 shadow-sm z-10">
       <nav>
         <div className="max-w-7xl mx-auto flex justify-between h-16 items-center px-6">
-          <a
-            href="#hero"
-            className="block md:hidden text-xl font-bold tracking-tight">
-            AP
-          </a>
+          
           <div className="text-xl font-bold">
             <a
               href="#hero"
