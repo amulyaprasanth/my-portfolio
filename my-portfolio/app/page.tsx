@@ -5,21 +5,23 @@ import About from "@/components/sections/About";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      <div className="relative">
-        <Navbar />
+      <div className="relative min-h-screen">
+        {/* Background */}
         <Image
-          alt="background-image"
-          src="/bg.jpg"
-          fill
-          priority
-          className="fixed inset-0 object-cover"
+            src="/bg.jpg"
+            alt="Background"
+            fill
+            priority
+            className="-z-10 fixed inset-0 object-cover"
         />
+
+        {/* Foreground */}
+        <Navbar />
+
         <main>
           <Hero />
           <About />
         </main>
       </div>
-    </div>
   );
 }

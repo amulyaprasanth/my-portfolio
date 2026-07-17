@@ -1,32 +1,71 @@
+"use client";
 import Image from "next/image";
 import ScrollIndicator from "../ui/ScrollIndication";
+import {motion} from "motion/react";
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative">
-      <div className="max-w-7xl mx-auto px-30">
-        <div className="h-screen flex items-center justify-between">
-          {/* Left Content */}
-          <div className="flex flex-col gap-4">
-            <p className="text-3xl">Hello, I'm</p>
+    <section id="hero" className="relative min-h-screen flex items-center">
+      <div className="max-w-7xl w-full mx-auto px-8">
+        <div className="flex items-center justify-between gap-24">
+          {/* Left */}
+          <div className="max-w-2xl flex flex-col gap-6">
+            <motion.p
+              className="text-4xl"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}>
+              Hello, I'm
+            </motion.p>
 
-            <h1 className="text-6xl font-bold text-sky-500">
+            <motion.h1
+              className="text-7xl font-bold leading-tight text-sky-500"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}>
               Amulya Prasanth
-            </h1>
+            </motion.h1>
 
-            <h2 className="text-2xl text-gray-600">
+            <motion.h2
+              className="text-3xl text-gray-400"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}>
               AI Engineer | Machine Learning Engineer
-            </h2>
+            </motion.h2>
 
-            <a
-              href="#contact"
-              className="inline-block font-bold w-fit rounded-2xl bg-blue-700/70 px-6 py-3 border border-transparent transition-all duration-300 hover:border-white hover:bg-blue-700/0">
-              Contact Me
-            </a>
+            <motion.div
+              className="flex gap-4 mt-2"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: 0.8,
+              }}>
+              <motion.a
+                href="#contact"
+                className="inline-block w-fit rounded-2xl bg-blue-700/70 px-7 py-4 font-bold transition-all duration-300 hover:border-white hover:bg-transparent border border-transparent"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}>
+                Contact Me
+              </motion.a>
+
+              <motion.a
+                href="#projects"
+                className="inline-block w-fit rounded-2xl bg-blue-700/70 px-7 py-4 font-bold transition-all duration-300 hover:border-white hover:bg-transparent border border-transparent"
+                whileHover={{ scale: 1.03, y: -2 }}
+                whileTap={{ scale: 0.97 }}>
+                Projects
+              </motion.a>
+            </motion.div>
           </div>
 
-          {/* Right Content */}
-          <div className="relative w-[300px] h-[400px] overflow-hidden rounded-full">
+          {/* Right */}
+          <motion.div
+            className="relative h-[480px] w-[360px] overflow-hidden rounded-full"
+            initial={{ scale: 0.5 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.5 }}>
             <Image
               src="/profile.jpg"
               alt="Profile"
@@ -35,9 +74,10 @@ export default function Hero() {
               priority
               className="object-cover"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
+
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-50">
         <ScrollIndicator />
       </div>
