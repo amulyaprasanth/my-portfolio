@@ -1,7 +1,21 @@
+"use client";
+import { motion } from "motion/react";
+
 export default function About() {
   return (
-    <section id="about" className="py-12">
-      <div className="max-w-7xl mx-auto px-10 lg:px-20 py-10 bg-white/20 backdrop-blur-md rounded-3xl">
+    <motion.section
+      id="about"
+      className="py-12"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{
+        once: true,
+        amount: 0.3,
+      }}
+      transition={{
+        duration: 0.8,
+      }}>
+      <div className="max-w-7xl mx-auto px-10 lg:px-20 py-10 bg-white/20 backdrop-blur-md rounded-3xl text-center">
         <h2 className="text-3xl font-bold text-blue-500 text-center mb-8">
           About Me
         </h2>
@@ -16,11 +30,13 @@ export default function About() {
             problems. I currently work as a{" "}
             <span className="font-semibold text-blue-300">
               Systems Engineer at Tata Consultancy Services (TCS)
-            </span>, where I contribute to building AI-driven software solutions.
+            </span>
+            , where I contribute to building AI-driven software solutions.
             Previously, I worked as a{" "}
             <span className="font-semibold text-blue-300">
               Freelance Machine Learning Engineer
-            </span>, developing AI applications in computer vision and predictive
+            </span>
+            , developing AI applications in computer vision and predictive
             analytics, including an AI-powered Fruit Ripeness Prediction System,
             an Automated Bottle Detection System, and an intelligent Focus
             Assistant that recommends personalized neuro-habits to improve
@@ -48,12 +64,13 @@ export default function About() {
             responses using Wikipedia and real-time web search; and the{" "}
             <span className="font-semibold text-blue-300">
               Automated Amazon Stock Prediction System
-            </span>, which leverages PyTorch LSTMs, a Feature Store, GitHub
-            Actions, and Streamlit to continuously retrain, deploy, and serve
-            next-day stock price forecasts.
+            </span>
+            , which leverages PyTorch LSTMs, a Feature Store, GitHub Actions,
+            and Streamlit to continuously retrain, deploy, and serve next-day
+            stock price forecasts.
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
