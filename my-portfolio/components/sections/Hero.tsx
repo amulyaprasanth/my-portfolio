@@ -1,20 +1,21 @@
 import Image from "next/image";
+import ScrollIndicator from "../ui/ScrollIndication";
 
 export default function Hero() {
   return (
-    <section id="hero" className="py-24">
+    <section id="hero" className="relative">
       <div className="max-w-7xl mx-auto px-30">
-        <div className="flex items-center justify-between">
+        <div className="h-screen flex items-center justify-between">
           {/* Left Content */}
           <div className="flex flex-col gap-4">
             <p className="text-3xl">Hello, I'm</p>
 
-            <h1 className="text-6xl font-bold text-blue-500">
+            <h1 className="text-6xl font-bold text-sky-500">
               Amulya Prasanth
             </h1>
 
             <h2 className="text-2xl text-gray-600">
-              Applied AI Engineer | Machine Learning Engineer
+              AI Engineer | Machine Learning Engineer
             </h2>
 
             <a
@@ -25,16 +26,20 @@ export default function Hero() {
           </div>
 
           {/* Right Content */}
-          <div>
+          <div className="relative w-[300px] h-[400px] overflow-hidden rounded-full">
             <Image
-              alt="profile-image"
               src="/profile.jpg"
-              width={300}
-              height={300}
-              className="rounded-full"
+              alt="Profile"
+              fill
+              sizes="auto"
+              priority
+              className="object-cover"
             />
           </div>
         </div>
+      </div>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-50">
+        <ScrollIndicator />
       </div>
     </section>
   );

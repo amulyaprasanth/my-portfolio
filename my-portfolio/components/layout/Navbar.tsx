@@ -2,7 +2,7 @@ import { navLinks } from "@/data/navigation";
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 shadow-sm">
+    <header className="sticky top-0 shadow-sm z-10">
       <nav>
         <div className="max-w-7xl mx-auto flex justify-between h-16 items-center px-6">
           <div className="text-xl font-bold">
@@ -15,7 +15,7 @@ export default function Navbar() {
             {navLinks.map((link) => (
               <li
                 key={link.href}
-                className="text-gray-700 hover:text-black transition-colors">
+                className="text-white hover:text-gray-600 transition-colors">
                 <a href={link.href}>{link.name}</a>
               </li>
             ))}
