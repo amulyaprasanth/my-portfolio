@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import ScrollIndicator from "../ui/ScrollIndication";
-import {motion} from "motion/react";
+import { motion } from "motion/react";
 
 export default function Hero() {
   return (
