@@ -8,7 +8,7 @@ export default function SkillCard({ title, items }: skillCategory) {
     <motion.div
       className="w-3xl h-2xl flex flex-col flex-wrap gap-4 items-center bg-gray-500/30 py-12 rounded-3xl"
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{duration: 0.7}}>
       <h1 className="text-center font-bold text-2xl text-indigo-300">
         {title}
