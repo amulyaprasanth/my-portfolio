@@ -3,7 +3,7 @@ import { skillCategory } from "@/types/skill";
 import { motion } from "motion/react";
 import Image from "next/image";
 
-export default function SkillCard({ title, items }: skillCategory) {
+export default function SkillCard({ title, items }: Readonly<skillCategory>) {
   return (
     <motion.div
       className="w-3xl h-2xl flex flex-col flex-wrap gap-4 items-center bg-gray-500/30 py-12 rounded-3xl"
