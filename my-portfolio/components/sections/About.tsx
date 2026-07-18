@@ -36,7 +36,7 @@ export default function About() {
             <span className="font-semibold text-blue-300">
               Freelance Machine Learning Engineer
             </span>
-            , developing AI applications in computer vision and predictive
+            {" "}, developing AI applications in computer vision and predictive
             analytics, including an AI-powered Fruit Ripeness Prediction System,
             an Automated Bottle Detection System, and an intelligent Focus
             Assistant that recommends personalized neuro-habits to improve
@@ -65,7 +65,7 @@ export default function About() {
             <span className="font-semibold text-blue-300">
               Automated Amazon Stock Prediction System
             </span>
-            , which leverages PyTorch LSTMs, a Feature Store, GitHub Actions,
+            {" "}, which leverages PyTorch LSTMs, a Feature Store, GitHub Actions,
             and Streamlit to continuously retrain, deploy, and serve next-day
             stock price forecasts.
           </p>

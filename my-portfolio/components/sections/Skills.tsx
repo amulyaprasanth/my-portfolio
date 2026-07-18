@@ -1,16 +1,6 @@
-"use client";
 import { skills } from "@/data/skills";
 import SkillCard from "../ui/SkillCard";
-import { motion } from "motion/react";
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-};
 export default function Skills() {
   return (
     <section id="skills" className="py-12">
@@ -19,11 +9,7 @@ export default function Skills() {
           {" "}
           Skills{" "}
         </h1>
-        <motion.div
-          className="flex flex-wrap gap-3 justify-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible">
+        <div className="flex flex-wrap gap-3 justify-center">
           {skills.map((skill) => (
             <SkillCard
               key={skill.title}
@@ -31,7 +17,7 @@ export default function Skills() {
               items={skill.items}
             />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
