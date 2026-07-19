@@ -53,6 +53,16 @@ export default function Hero() {
                                 Contact Me
                             </motion.button>
 
+                            <motion.a
+                                href="/resume.pdf"
+                                download="Amulya_Prasanth_Resume.pdf"
+                                className="inline-block rounded-2xl border border-blue-600 bg-blue-700/70 px-7 py-4 font-bold transition-all duration-300 hover:bg-transparent hover:border-white"
+                                whileHover={{scale: 1.03, y: -2}}
+                                whileTap={{scale: 0.97}}
+                            >
+                                Download Resume
+                            </motion.a>
+
                         </motion.div>
                     </div>
 
