@@ -2,16 +2,20 @@
 
 import { ChevronsDown } from "lucide-react";
 
-export default function ScrollIndicator() {
-  const scrollDown = () => {
-    document.getElementById("about")?.scrollIntoView({
+ type ScrollProps = {
+  id: string;
+}
+
+export default function ScrollIndicator({id}: Readonly<ScrollProps>  ) {
+  const scrollDown = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
   };
 
   return (
     <button
-      onClick={scrollDown}
+      onClick={() => scrollDown(id)}
       className="flex flex-col items-center gap-2 cursor-pointer group"
       aria-label="Scroll to About section">
       <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center p-1 group-hover:border-blue-400 transition-colors">

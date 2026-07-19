@@ -3,6 +3,7 @@ import Navbar from "@/components/layout/Navbar";
 import Image from "next/image";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
           <Hero />
           <About />
           <Skills/>
+          <Projects/>
         </main>
       </div>
   );

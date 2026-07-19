@@ -22,6 +22,7 @@ export const projects: Project[] = [
       "Implemented Google Authentication and persistent conversational history for personalized interactions.",
       "Developed a full-stack application with a Next.js frontend and FastAPI backend using LangChain orchestration.",
     ],
+    thumbnail:"/versechat.png"
   },
   {
     name: "LangGenie",
@@ -47,6 +48,7 @@ export const projects: Project[] = [
       "Built AI-powered writing tools capable of generating essays, blogs, speeches, and other long-form content.",
       "Developed a full-stack application with a React.js frontend and FastAPI backend, containerized using Docker.",
     ],
+    thumbnail: "/LangGenie.png"
   },
   {
     name: "Hourly Amazon Stock Prediction",
@@ -73,5 +75,6 @@ export const projects: Project[] = [
       "Leveraged Hopsworks Feature Store for versioned feature management, reproducible training, and consistent online/offline feature serving.",
       "Deployed an interactive Streamlit dashboard for real-time prediction visualization and model inference.",
     ],
+    thumbnail: "/amazon_stock_prediction.png"
   },
 ];

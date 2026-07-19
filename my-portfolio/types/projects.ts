@@ -5,4 +5,5 @@ export type Project = {
   live: string;
   technologies: string[];
   highlights: string[];
+  thumbnail: string;
 };

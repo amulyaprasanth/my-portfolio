@@ -79,7 +79,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-50">
-        <ScrollIndicator />
+        <ScrollIndicator id={"about"}/>
       </div>
     </section>
   );
